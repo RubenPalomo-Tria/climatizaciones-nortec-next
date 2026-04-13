@@ -1,12 +1,7 @@
-import type { NextConfig } from "next";
+// next.config.js
+const { NEXT_PUBLIC_BASE_PATH } = process.env;
 
-const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/climatizaciones-nortec-next',
-  images: {
-    unoptimized: true,
-  },
-  reactStrictMode: true,
+module.exports = {
+  basePath: NEXT_PUBLIC_BASE_PATH || '/climatizaciones-nortec-next',
+  // other configurations...
 };
-
-export default nextConfig;
